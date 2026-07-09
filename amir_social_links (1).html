@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>么مᵢᵣ ⚜️ - Social Links</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 30px;
+      padding: 40px 35px;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 10px 60px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.06);
+      animation: slideUp 0.8s ease-out;
+      border: 2px solid #000000;
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .avatar-container {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .avatar {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #000000;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    }
+
+    .status-dot {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      width: 24px;
+      height: 24px;
+      background: #000000;
+      border-radius: 50%;
+      border: 3px solid #ffffff;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(0,0,0,0.4); }
+      50% { box-shadow: 0 0 0 12px rgba(0,0,0,0); }
+    }
+
+    .name {
+      font-size: 28px;
+      font-weight: 700;
+      color: #000000;
+      margin-bottom: 4px;
+      letter-spacing: 1px;
+    }
+
+    .handle {
+      font-size: 14px;
+      color: #333333;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .bio {
+      font-size: 14px;
+      color: #555555;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .link-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 16px 24px;
+      border-radius: 16px;
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid #000000;
+      cursor: pointer;
+    }
+
+    .link-btn::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+      transition: left 0.5s;
+    }
+
+    .link-btn:hover::before {
+      left: 100%;
+    }
+
+    .link-btn:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    }
+
+    .instagram { background: #000000; }
+    .tiktok { background: #000000; }
+    .snapchat { background: #000000; color: #ffffff !important; }
+    .facebook { background: #000000; }
+
+    .icon {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+    }
+
+    .footer {
+      margin-top: 25px;
+      font-size: 12px;
+      color: #888888;
+    }
+
+    .share-btn {
+      margin-top: 20px;
+      padding: 12px 30px;
+      background: #000000;
+      color: #ffffff;
+      border: 2px solid #000000;
+      border-radius: 25px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;
+    }
+
+    .share-btn:hover {
+      background: #ffffff;
+      color: #000000;
+      transform: scale(1.05);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .particles {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    .particle {
+      position: absolute;
+      width: 8px; height: 8px;
+      background: rgba(0,0,0,0.08);
+      border-radius: 50%;
+      animation: float 15s infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { transform: translateY(-10vh) rotate(720deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="particles" id="particles"></div>
+
+<div class="card">
+  <div class="avatar-container">
+    <img src="https://i.postimg.cc/QxnY2RY1/lv-0-20260702222840.jpg" class="avatar" alt="Amir">
+    <div class="status-dot"></div>
+  </div>
+
+  <h1 class="name">么مᵢᵣ ⚜️</h1>
+  <p class="handle">@chaudhry._.amir</p>
+  <p class="bio">Connect with me on all platforms! 👇</p>
+
+  <div class="links">
+    <a href="https://instagram.com/chaudhry._.amir" target="_blank" class="link-btn instagram">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      Instagram
+    </a>
+
+    <a href="https://www.tiktok.com/@chaudhry._.amir" target="_blank" class="link-btn tiktok">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.88-2.89 2.89 2.89 0 012.88-2.89c.3 0 .59.05.86.13V9.2a6.33 6.33 0 00-.86-.06A6.34 6.34 0 003.5 15.48a6.34 6.34 0 006.33 6.33 6.34 6.34 0 006.33-6.33V9.03a8.16 8.16 0 004.8 1.55V7.13a4.85 4.85 0 01-1.37-.44z"/></svg>
+      TikTok
+    </a>
+
+    <a href="https://www.snapchat.com/add/ch.amir95" target="_blank" class="link-btn snapchat">
+      <svg class="icon" viewBox="0 0 24 24" fill="#fff"><path d="M12.206.793c.99 0 4.347.276 5.93 3.821.529 1.193.403 3.219.299 4.847l-.003.06c-.012.18-.022.345-.03.51.075.045.203.09.401.09.3-.016.659-.12 1.033-.301a.42.42 0 01.17-.025c.154 0 .283.074.389.227.171.25.143.58-.073.84-.205.246-.52.48-.94.673-.386.177-.727.294-.997.378-.128.04-.232.074-.318.105a.5.5 0 00-.192.1c-.175.155-.332.337-.466.541-.175.266-.33.555-.46.86-.13.306-.233.628-.306.966-.073.338-.112.68-.115 1.02 0 .3.03.593.09.875.06.283.154.552.28.805.128.253.29.484.484.69.195.207.423.384.68.53.26.146.55.26.87.34.32.08.66.12 1.02.12.36 0 .7-.04 1.02-.12.32-.08.61-.194.87-.34.26-.146.485-.323.68-.53.194-.206.356-.437.483-.69.127-.253.22-.522.28-.805.06-.282.09-.575.09-.875 0-.34-.04-.682-.115-1.02a3.67 3.67 0 00-.305-.966 3.15 3.15 0 00-.46-.86 2.16 2.16 0 00-.467-.54.5.5 0 00-.192-.1c-.086-.032-.19-.066-.318-.106-.27-.084-.61-.2-.997-.378-.42-.193-.735-.427-.94-.673-.216-.26-.244-.59-.073-.84.106-.153.235-.227.389-.227a.42.42 0 01.17.025c.374.181.733.285 1.033.301.198 0 .326-.045.4-.09-.008-.165-.018-.33-.03-.51l-.003-.06c-.104-1.628-.23-3.654.3-4.847C17.441 1.07 20.798.793 21.788.793c.99 0 4.347.276 5.93 3.821.529 1.193.403 3.219.299 4.847l-.003.06c-.012.18-.022.345-.03.51.075.045.203.09.401.09.3-.016.659-.12 1.033-.301a.42.42 0 01.17-.025c.154 0 .283.074.389.227.171.25.143.58-.073.84-.205.246-.52.48-.94.673-.386.177-.727.294-.997.378-.128.04-.232.074-.318.105a.5.5 0 00-.192.1c-.175.155-.332.337-.466.541-.175.266-.33.555-.46.86-.13.306-.233.628-.306.966-.073.338-.112.68-.115 1.02 0 .3.03.593.09.875.06.283.154.552.28.805.128.253.29.484.484.69.195.207.423.384.68.53.26.146.55.26.87.34.32.08.66.12 1.02.12.36 0 .7-.04 1.02-.12.32-.08.61-.194.87-.34.26-.146.485-.323.68-.53.194-.206.356-.437.483-.69.127-.253.22-.522.28-.805.06-.282.09-.575.09-.875 0-.34-.04-.682-.115-1.02a3.67 3.67 0 00-.305-.966 3.15 3.15 0 00-.46-.86 2.16 2.16 0 00-.467-.54.5.5 0 00-.192-.1c-.086-.032-.19-.066-.318-.106-.27-.084-.61-.2-.997-.378-.42-.193-.735-.427-.94-.673-.216-.26-.244-.59-.073-.84.106-.153.235-.227.389-.227a.42.42 0 01.17.025c.374.181.733.285 1.033.301.198 0 .326-.045.4-.09-.008-.165-.018-.33-.03-.51l-.003-.06c-.104-1.628-.23-3.654.3-4.847C17.441 1.07 20.798.793 21.788.793z"/></svg>
+      Snapchat
+    </a>
+
+    <a href="https://www.facebook.com/ch.amir132" target="_blank" class="link-btn facebook">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      Facebook
+    </a>
+  </div>
+
+  <button class="share-btn" onclick="shareProfile()">🔗 Share My Profile</button>
+
+  <p class="footer">Made with ❤️ for 么مᵢᵣ ⚜️</p>
+</div>
+
+<script>
+  const particlesContainer = document.getElementById('particles');
+  for (let i = 0; i < 20; i++) {
+    const particle = document.createElement('div');
+    particle.className = 'particle';
+    particle.style.left = Math.random() * 100 + '%';
+    particle.style.animationDelay = Math.random() * 15 + 's';
+    particle.style.animationDuration = (10 + Math.random() * 10) + 's';
+    particle.style.width = particle.style.height = (5 + Math.random() * 15) + 'px';
+    particlesContainer.appendChild(particle);
+  }
+
+  function shareProfile() {
+    const shareData = {
+      title: '么مᵢᵣ ⚜️ - Social Links',
+      text: 'Check out my social media profiles!',
+      url: window.location.href
+    };
+
+    if (navigator.share) {
+      navigator.share(shareData);
+    } else {
+      navigator.clipboard.writeText(window.location.href);
+      const btn = document.querySelector('.share-btn');
+      const original = btn.textContent;
+      btn.textContent = '✅ Copied!';
+      setTimeout(() => btn.textContent = original, 2000);
+    }
+  }
+</script>
+
+</body>
+</html>
